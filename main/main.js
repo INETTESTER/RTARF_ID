@@ -23,19 +23,20 @@ export default function () {    //เรียกใช้ API ใน export def
   // if (!response || response.error_code || (response.status !== 200 && response.status !== 201 && response.status !== 204)) {
   //   console.log(response.status+" : "+response.body);
   // }
-  response = userinfo()
+  //response = userinfo()
   //response = refresh()
   //response = logout()
-  //response = public_key()
+  response = public_key()
   //response = introspect()
   //response = mobile()
   //response = share_token()
   //response = Get_Profile()
   //response = profile()
   error_check(response);
-  if (response.status === 401 || response.status === 500) {
+  if (response.status === 401 || response.status === 500 || response.status === 502) {
     console.log(response.status + ' : ' + response.body);
   }
+ 
 
 
   sleep(1)
