@@ -3,19 +3,26 @@ import { sleep } from 'k6';
 import { error_check } from '../check/check.js';
 import { scenario } from 'k6/execution';
 import { DownloadFile, GetProfile, PostProfile, PostProfile_2, PostProfile_3, UploadFile } from '../api/example.js';
+import { login_RTARF } from '../api/login_RTARF.js';
+import { userinfo } from '../api/userinfo.js';
+import { refresh } from '../api/refresh.js';
+import { logout } from '../api/logout.js';
+import { public_key } from '../api/public_key.js';
+import { introspect } from '../api/introspect.js';
+import { mobile } from '../api/mobile.js';
 
 
 
 //============================================================================
 
 export default function () {    //เรียกใช้ API ใน export default function
-  //response = GetProfile()
-  //response = PostProfile()
-  //response = PostProfile_2()
-  //response = PostProfile_3(scenario)
-  //response = DownloadFile()
-  //response = UploadFile()
-  //response = UploadFile_2()
+  response = login_RTARF()
+  //response = userinfo()
+  //response = refresh()
+  //response = logout()
+  //response = public_key()
+  //response = introspect()
+  //response = mobile()
 
 
   error_check(response);
