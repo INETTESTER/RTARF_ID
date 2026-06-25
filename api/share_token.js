@@ -12,7 +12,7 @@ export function share_token() {
 
     const response = http.post(url, null, params);
 
-    console.log('Response body:', response.body);
+    //console.log('Response body:', response.body);
 
     return response;
 }
