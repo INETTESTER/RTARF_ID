@@ -10,6 +10,9 @@ import { logout } from '../api/logout.js';
 import { public_key } from '../api/public_key.js';
 import { introspect } from '../api/introspect.js';
 import { mobile } from '../api/mobile.js';
+import { share_token } from '../api/share_token.js';
+import { Get_Profile } from '../api/Get_Profile.js';
+import { profile } from '../api/profile.js';
 
 
 
@@ -17,15 +20,24 @@ import { mobile } from '../api/mobile.js';
 
 export default function () {    //เรียกใช้ API ใน export default function
   response = login_RTARF()
+  error_check(response);
+  // if (!response || response.error_code || (response.status !== 200 && response.status !== 201 && response.status !== 204)) {
+  //   console.log(response.status+" : "+response.body);
+  // }
+  if (response.status === 401) {
+    console.log(response.status + ' : ' + response.body);
+  }
   //response = userinfo()
   //response = refresh()
   //response = logout()
   //response = public_key()
   //response = introspect()
   //response = mobile()
+  //response = share_token()
+  //response = Get_Profile()
+  //response = profile()
 
 
-  error_check(response);
   sleep(1)
 }
 
