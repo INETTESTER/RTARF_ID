@@ -123,8 +123,8 @@ const durationx = __ENV.durationx || "1";
 let response;
 const scenariox = __ENV.scenariox || "1";
 let options;
-//const vusx = Math.ceil(user / durationx);
-const vusx = Math.ceil(user / durationx / 2);
+const vusx = Math.ceil(user / durationx);
+//const vusx = Math.ceil(user / durationx / 2);
 if (scenariox == 1) {
   options = {
     http: {
