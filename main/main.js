@@ -12,14 +12,14 @@ import { introspect } from '../api/introspect.js';
 import { mobile } from '../api/mobile.js';
 import { share_token } from '../api/share_token.js';
 import { Get_Profile } from '../api/Get_Profile.js';
-import { profile } from '../api/profile.js';
+import { profile_ } from '../api/profile.js';
 
 
 
 //============================================================================
 
 export default function () {    //เรียกใช้ API ใน export default function
-  response = login_RTARF()
+  //response = login_RTARF()
   // if (!response || response.error_code || (response.status !== 200 && response.status !== 201 && response.status !== 204)) {
   //   console.log(response.status+" : "+response.body);
   // }
@@ -31,7 +31,10 @@ export default function () {    //เรียกใช้ API ใน export def
   //response = mobile()
   //response = share_token()
   //response = Get_Profile()
-  //response = profile()
+  //response = profile_()
+
+
+  
   error_check(response);
   if (response.status === 401 || response.status === 500 || response.status === 502) {
     console.log(response.status + ' : ' + response.body);

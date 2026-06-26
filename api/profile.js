@@ -3,7 +3,7 @@ import { token } from './env.js';
 
 const profileImage = open('../file/upload.png', 'b');
 
-export function profile() {
+export function profile_() {
     const url = 'https://uat-rtarf-idconnect.one.th/api/v1/users/profile';
 
     const payload = {
