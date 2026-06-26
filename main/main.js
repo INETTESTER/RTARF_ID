@@ -19,7 +19,7 @@ import { profile } from '../api/profile.js';
 //============================================================================
 
 export default function () {    //เรียกใช้ API ใน export default function
-  //response = login_RTARF()
+  response = login_RTARF()
   // if (!response || response.error_code || (response.status !== 200 && response.status !== 201 && response.status !== 204)) {
   //   console.log(response.status+" : "+response.body);
   // }
@@ -30,7 +30,7 @@ export default function () {    //เรียกใช้ API ใน export def
   //response = introspect()
   //response = mobile()
   //response = share_token()
-  response = Get_Profile()
+  //response = Get_Profile()
   //response = profile()
   error_check(response);
   if (response.status === 401 || response.status === 500 || response.status === 502) {
