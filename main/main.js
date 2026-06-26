@@ -32,7 +32,7 @@ export default function () {    //เรียกใช้ API ใน export def
 
 
   error_check(response);
-  if (response.status === 401 || response.status === 500 || response.status === 502) {
+  if (response.status === 404 || response.status === 500 || response.status === 502) {
     console.log(response.status + ' : ' + response.body);
   }
  
