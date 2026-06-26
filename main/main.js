@@ -20,10 +20,9 @@ import { profile_ } from '../api/profile.js';
 
 export default function () {    //เรียกใช้ API ใน export default function
   //response = login_RTARF()
-  response = userinfo()
-  //response = refresh()
+  //response = userinfo()
   //response = logout()
-  //response = public_key()
+  response = public_key()
   //response = introspect()
   //response = mobile()
   //response = share_token()
