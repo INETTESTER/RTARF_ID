@@ -24,8 +24,8 @@ export default function () {    //เรียกใช้ API ใน export def
   //response = logout()
   //response = public_key()
   //response = introspect()
-  response = mobile()
-  //response = share_token()
+  //response = mobile()
+  response = share_token()
   //response = Get_Profile()
   //response = profile_()
 
