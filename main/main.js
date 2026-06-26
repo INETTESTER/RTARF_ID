@@ -22,8 +22,8 @@ export default function () {    //เรียกใช้ API ใน export def
   //response = login_RTARF()
   //response = userinfo()
   //response = logout()
-  response = public_key()
-  //response = introspect()
+  //response = public_key()
+  response = introspect()
   //response = mobile()
   //response = share_token()
   //response = Get_Profile()
@@ -123,7 +123,8 @@ const durationx = __ENV.durationx || "1";
 let response;
 const scenariox = __ENV.scenariox || "1";
 let options;
-const vusx = Math.ceil(user / durationx);
+//const vusx = Math.ceil(user / durationx);
+const vusx = Math.ceil(user / durationx / 2);
 if (scenariox == 1) {
   options = {
     http: {
